@@ -1,0 +1,85 @@
+﻿<Page
+    x:Class="CoursesManagement.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CoursesManagement"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="Red">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Image Margin="40" 
+               Grid.Row="0" 
+               Source="Assets/Logo-uao.png" 
+               Stretch="Uniform"/>
+        <Grid Grid.Row="1" 
+              HorizontalAlignment="Center"
+              VerticalAlignment="Top"
+              Margin="0,0,0,10"
+              >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock
+                Grid.Row="0"
+                Grid.Column="0"
+                Text="Usuario:"
+                Margin="10"
+                Foreground="White"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Center"/>
+            <TextBox 
+                Name="textBoxUsuario"
+                Grid.Column="1"
+                Grid.Row="0"
+                Margin="10"
+                Width="120"
+               Background="White"
+                Foreground="Black"/>
+            <TextBlock
+                Grid.Row="1"
+                Grid.Column="0"
+                Text="Contraseña:"
+                Margin="10"
+                Foreground="White"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Center"/>
+            <PasswordBox 
+                Name="textBoxPassword"
+                Grid.Column="1"
+                Margin="10"
+                Width="120"
+                Grid.Row="1"
+                Background="White"
+                Foreground="Black"/>
+        </Grid>
+        <StackPanel
+            Grid.Row="2"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Orientation="Horizontal"
+            
+            >
+            <Button Name="btnInicio"
+                Click="btnInicio_Click"
+                Content="Iniciar sesion"
+                Background="White"
+                Margin="0,0,10,0"
+                />
+            <Button 
+                Background="White"
+                Content="Crear cuenta"/>
+        </StackPanel>
+
+    </Grid>
+</Page>
